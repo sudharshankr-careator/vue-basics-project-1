@@ -16,7 +16,19 @@
 			</div>
 			<button class="btn btn-dark badge rounded-pill">
 				<i class="fas fa-cart-plus cart">
-					<div class="badge bg-danger top-20 start-0 translate-middle  border border-light rounded-pill">5</div>
+					<div
+						class="
+							badge
+							bg-danger
+							top-20
+							start-0
+							translate-middle
+							border border-light
+							rounded-pill
+						"
+					>
+						5
+					</div>
 				</i>
 			</button>
 		</div>
@@ -45,6 +57,7 @@ strong {
 	font-size: 2rem;
 }
 .form-control {
+	margin-top: -0.5rem;
 	margin-left: 2rem;
 	width: 25rem;
 	border-radius: 0.8rem;
@@ -54,7 +67,13 @@ strong {
 }
 .search-item {
 	margin-left: -2.5rem;
-	margin-top: 0.7rem;
+	margin-top: 0.2rem;
 	color: rgb(151, 151, 243);
+}
+.navbar {
+	z-index: 100;
+	position: fixed;
+	width: 100%;
+	height: 3.8rem;
 }
 </style>

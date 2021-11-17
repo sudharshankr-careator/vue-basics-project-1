@@ -39,46 +39,85 @@
 			</div>
 		</div>
 	</div>
-    <div class="container">
-        <div class="row">
-            <div class="card col-md-3">
-                <img src="" alt="">
-                <h5 style="
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            max-width: 100ch;
-          "> Iphone</h5>
-                <p style="
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            max-width: 100ch;
-          ">RAM 1Tb Memory 1Pb</p>
-                <p><strong>Price:</strong>&nbsp; 26000</p>
-                <button class="btn btn-primary">Add to Cart</button>
-            </div>
-        </div>
-    </div>
+	<div class="container">
+		<div class="row">
+			<div class="card col-md-2" v-for="item in product" :key="item">
+				<img class="imgs" :src="item.image" alt="" />
+				<h5
+					style="
+						white-space: nowrap;
+						overflow: hidden;
+						text-overflow: ellipsis;
+						max-width: 100ch;
+					"
+				>
+					{{ item.title }}
+				</h5>
+				<p
+					style="
+						white-space: nowrap;
+						overflow: hidden;
+						text-overflow: ellipsis;
+						max-width: 100ch;
+					"
+				>
+					{{ item.description }}
+				</p>
+				<p><strong>Price:</strong>&nbsp;{{ item.price }}</p>
+				<button class="btn btn-warning">Add to Cart</button>
+			</div>
+		</div>
+	</div>
 </template>
 
 <script>
+import axios from "axios";
 export default {
 	name: "Product",
+	data() {
+		return {
+			product: [],
+			uri: "https://fakestoreapi.com/products",
+		};
+	},
+	mounted() {
+		axios
+			.get(this.uri)
+			.then((res) => (this.product = res.data))
+			.catch((e) => console.log(e));
+	},
 };
 </script>
 
 <style>
-.card {
-	margin: 2rem;
+img:hover {
+	transition: 0.3s ease-in-out;
+	transform: scale(1.1);
 }
-.item{
-    margin: 0.5rem;
-    text-align: center;
+.btn {
+	margin-bottom: 1rem;
+}
+.card {
+	margin: 0.8rem;
+    top: 50%;
+    left: 3%;
+}
+.item {
+	margin: 0.5rem;
+	text-align: center;
 }
 img {
 	width: 6rem;
 	height: 6rem;
 	margin-bottom: 1rem;
+	margin-top: 4rem;
+	margin-left: 1rem;
+}
+.imgs{
+   width: 6rem;
+	height: 6rem;
+	margin-bottom: 1rem;
+	margin-top: 1rem;
+	margin-left: 1rem;
 }
 </style>
