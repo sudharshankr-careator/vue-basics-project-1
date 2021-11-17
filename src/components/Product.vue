@@ -63,8 +63,8 @@
 				>
 					{{ item.description }}
 				</p>
-				<p><strong>Price:</strong>&nbsp;{{ item.price }}</p>
-				<button class="btn btn-warning">Add to Cart</button>
+				<p><b>Price:</b> &#8377; {{ item.price }}</p>
+				<button class="btn btn-info"><b>Add to Cart</b></button>
 			</div>
 		</div>
 	</div>
@@ -101,6 +101,8 @@ img:hover {
 	margin: 0.8rem;
     top: 50%;
     left: 3%;
+    backface-visibility: hidden;
+    background-color: rgb(250, 250, 245);
 }
 .item {
 	margin: 0.5rem;

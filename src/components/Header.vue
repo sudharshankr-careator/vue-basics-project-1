@@ -31,6 +31,7 @@
 					</div>
 				</i>
 			</button>
+            <i class="fa fa-user bg-light rounded-pill btn-lg active top-0"  aria-hidden="true"></i>
 		</div>
 	</header>
 </template>
@@ -76,4 +77,11 @@ strong {
 	width: 100%;
 	height: 3.8rem;
 }
+.btn-dark{
+    margin-left: 37rem;
+}
+.fa-user{
+    margin-top: -.6rem;
+}
+
 </style>

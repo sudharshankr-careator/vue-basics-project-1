@@ -18,4 +18,9 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+*{
+	background-clip: border-box;
+	background-origin: border-box;
+}
+</style>
