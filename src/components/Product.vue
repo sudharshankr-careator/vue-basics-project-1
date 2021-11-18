@@ -99,10 +99,10 @@ img:hover {
 }
 .card {
 	margin: 0.8rem;
-    top: 50%;
-    left: 3%;
-    backface-visibility: hidden;
-    background-color: rgb(250, 250, 245);
+	top: 50%;
+	left: 3%;
+	backface-visibility: hidden;
+	background-color: rgb(250, 250, 245);
 }
 .item {
 	margin: 0.5rem;
@@ -115,8 +115,8 @@ img {
 	margin-top: 4rem;
 	margin-left: 1rem;
 }
-.imgs{
-   width: 6rem;
+.imgs {
+	width: 6rem;
 	height: 6rem;
 	margin-bottom: 1rem;
 	margin-top: 1rem;
