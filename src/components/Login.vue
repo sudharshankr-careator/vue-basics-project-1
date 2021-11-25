@@ -33,7 +33,6 @@
 </template>
 
 <script>
-//import { CREATE_USER_MUTATION, SIGNIN_USER_MUTATION } from './Constants/graphql'
 export default {
 	name: "Login",
 	data() {
@@ -44,11 +43,6 @@ export default {
 			password: "",
 		};
 	},
-	methods: {
-        confirm(){
-            //look into it later
-        }
-	 },
 };
 </script>
 
